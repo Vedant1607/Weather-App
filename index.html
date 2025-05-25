@@ -1,29 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="mainContainer">
-        <div class="container">
-            <div class="header">
-                <h1>Weather App</h1>
-            </div>
-            <div class="box">
-                <div class="picContainer">
-                    <img src="images/cloud.png" alt="weather icon">
-                </div>
-                <div>
-                    <input class="search-location" type="text" placeholder="Enter City">
-                    <button class="search-location-button"> Search</button>
-                </div>
-            </div>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Import Google Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="main-container">
+      <header class="input-container">
+        <input class="city-input" type="text" placeholder="search city" />
+        <button class="search-btn">
+          <span class="material-symbols-outlined"> search </span>
+        </button>
+      </header>
+
+      <section class="weather-info" style="display:none;">
+        <div class="location-date-container">
+          <div class="location">
+            <span class="material-symbols-outlined"> location_on </span>
+            <h4 class="country-txt">India</h4>
+          </div>
+          <h5 class="current-date-txt regular-txt">Mon, 26 May</h5>
         </div>
-    </div>
+
+        <div class="weather-summary-container">
+          <img
+            src="assets/weather//clouds.svg"
+            alt="clouds-img"
+            class="weather-summary-img"
+          />
+          <div class="weather-summary-info">
+            <h1 class="temp-text">32°C</h1>
+            <h3 class="condition-txt regular-txt">Clouds</h3>
+          </div>
+        </div>
+
+        <div class="weather-conditions-container">
+          <div class="condition-item">
+            <span class="material-symbols-outlined"> water_drop </span>
+            <div class="condition-info">
+              <h5 class="regular-txt">Humidity</h5>
+              <h5 class="humidity-value-txt">55%</h5>
+            </div>
+          </div>
+
+          <div class="condition-item">
+            <span class="material-symbols-outlined"> air </span>
+            <div class="condition-info">
+              <h5 class="regular-txt">Wind Speed</h5>
+              <h5 class="humidity-value-txt">2 Km/h</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="forecast-items-container">
+          <div class="forecast-item">
+            <h5 class="forecast-item-date refular-txt">26 May</h5>
+            <img src="assets/weather/thunderstorm.svg" alt="forecast-img" class="forecast-item-img"/>
+            <h5 class="forecast-item-temp"></h5>
+          </div>         
+          
+          <div class="forecast-item">
+            <h5 class="forecast-item-date refular-txt">26 May</h5>
+            <img src="assets/weather/thunderstorm.svg" alt="forecast-img" class="forecast-item-img"/>
+            <h5 class="forecast-item-temp"></h5>
+          </div>          
+          
+          <div class="forecast-item">
+            <h5 class="forecast-item-date refular-txt">26 May</h5>
+            <img src="assets/weather/thunderstorm.svg" alt="forecast-img" class="forecast-item-img"/>
+            <h5 class="forecast-item-temp"></h5>
+          </div>         
+          
+          <div class="forecast-item">
+            <h5 class="forecast-item-date refular-txt">26 May</h5>
+            <img src="assets/weather/thunderstorm.svg" alt="forecast-img" class="forecast-item-img"/>
+            <h5 class="forecast-item-temp"></h5>
+          </div>         
+          
+          <div class="forecast-item">
+            <h5 class="forecast-item-date refular-txt">26 May</h5>
+            <img src="assets/weather/thunderstorm.svg" alt="forecast-img" class="forecast-item-img"/>
+            <h5 class="forecast-item-temp"></h5>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
