@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css" />
-
+    
+    <script src="script.js" defer></script>
+    
     <!-- Import Google Icons -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    rel="stylesheet"
     />
   </head>
   <body>
@@ -92,8 +94,27 @@
           </div>
         </div>
       </section>
+
+      <section class="search-city section-message">
+        <img src="assets/message/search-city.png" alt="">
+         <div>
+          <h1>Search City</h1>
+          <h4 class="regular-txt">
+            Find out the weather conditions of the city
+          </h4>
+         </div>
+      </section>
+      
+      <section class="not-found section-message" style="display: none;">
+        <img src="assets/message/not-found.png" alt="">
+         <div>
+          <h1>Search City</h1>
+          <h4 class="regular-txt">
+            Find out the weather conditions of the city
+          </h4>
+         </div>
+      </section>
     </main>
 
-    <script src="script.js"></script>
   </body>
 </html>
