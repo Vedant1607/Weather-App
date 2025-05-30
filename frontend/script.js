@@ -15,8 +15,6 @@ const currentDateTxt = document.querySelector('.current-date-txt');
 
 const forecastItemsContainer = document.querySelector('.forecast-items-container');
 
-const apiKey = "";
-
 searchBtn.addEventListener('click', () => {
     if (cityInput.value.trim() !== '') {
         updateWeatherInfo(cityInput.value);
@@ -34,11 +32,11 @@ cityInput.addEventListener('keydown', (event) => {
 })
 
 const getFetchData = async function (endPoint, city) {
-    const apiUrl = `https://api.openweathermap.org/data/2.5/${endPoint}?q=${city}&appid=${apiKey}&units=metric`
+    const apiUrl = `http://localhost:3000/api/${endPoint}?city=${encodeURIComponent(city)}`;
     const response = await fetch(apiUrl);
-
     return response.json();
-}
+};
+
 
 const getWeatherIcon = function(id) {
     if (id <= 232) return 'thunderstom.svg';
@@ -117,7 +115,7 @@ const updateForecastItems = function (weatherData) {
 
     const forecastItem = `
         <div class="forecast-item">
-            <h5 class="forecast-item-date refular-txt">${dateResult}</h5>
+            <h5 class="forecast-item-date regular-txt">${dateResult}</h5>
             <img src="assets/weather/${getWeatherIcon(id)}" alt="forecast-img" class="forecast-item-img"/>
             <h5 class="forecast-item-temp">${Math.round(temp)}°C</h5>
         </div>  
