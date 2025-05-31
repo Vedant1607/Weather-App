@@ -32,14 +32,13 @@ cityInput.addEventListener('keydown', (event) => {
 })
 
 const getFetchData = async function (endPoint, city) {
-    const apiUrl = `http://localhost:3000/api/${endPoint}?city=${encodeURIComponent(city)}`;
+    const apiUrl = `/api/${endPoint}?city=${encodeURIComponent(city)}`;
     const response = await fetch(apiUrl);
     return response.json();
 };
 
-
 const getWeatherIcon = function(id) {
-    if (id <= 232) return 'thunderstom.svg';
+    if (id <= 232) return 'thunderstorm.svg';
     if (id <= 321) return 'drizzle.svg';
     if (id <= 531) return 'rain.svg';
     if (id <= 622) return 'snow.svg';
